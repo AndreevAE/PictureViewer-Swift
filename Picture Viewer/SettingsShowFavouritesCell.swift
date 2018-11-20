@@ -17,26 +17,26 @@ class SettingsShowFavouritesCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        if (defaults.objectForKey("showFavourites") != nil) {
-            switcher.on = defaults.boolForKey("showFavourites")
+        if (defaults.object(forKey: "showFavourites") != nil) {
+            switcher.isOn = defaults.bool(forKey: "showFavourites")
         }
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     @IBAction func switchShowFavourites(sender: AnyObject) {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
         // сохранение значения переключателя в пользовательских настройках
-        if switcher.on {
-            defaults.setBool(true, forKey: "showFavourites")
+        if switcher.isOn {
+            defaults.set(true, forKey: "showFavourites")
         } else {
-            defaults.setBool(false, forKey: "showFavourites")
+            defaults.set(false, forKey: "showFavourites")
         }
     }
 

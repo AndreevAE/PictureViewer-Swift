@@ -17,26 +17,26 @@ class SettingsRandomOrderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        if (defaults.objectForKey("randomOrder") != nil) {
-            switcher.on = defaults.boolForKey("randomOrder")
+        if (defaults.object(forKey: "randomOrder") != nil) {
+            switcher.isOn = defaults.bool(forKey: "randomOrder")
         }
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     @IBAction func switchRandomOrder(sender: AnyObject) {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
         // сохранение значения переключателя в пользовательских настройках
-        if switcher.on {
-            defaults.setBool(true, forKey: "randomOrder")
+        if switcher.isOn {
+            defaults.set(true, forKey: "randomOrder")
         } else {
-            defaults.setBool(false, forKey: "randomOrder")
+            defaults.set(false, forKey: "randomOrder")
         }
     }
 

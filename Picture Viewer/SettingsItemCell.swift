@@ -18,26 +18,26 @@ class SettingsItemCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        if (defaults.objectForKey("autoSlideShow") != nil) {
-            switcher.on = defaults.boolForKey("autoSlideShow")
+        if (defaults.object(forKey: "autoSlideShow") != nil) {
+            switcher.isOn = defaults.bool(forKey: "autoSlideShow")
         }
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
     }
 
     @IBAction func saveSwitchState(sender: AnyObject) {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         // сохранение значения
-        if switcher.on {
-            defaults.setBool(true, forKey: "autoSlideShow")
+        if switcher.isOn {
+            defaults.set(true, forKey: "autoSlideShow")
         } else {
-            defaults.setBool(false, forKey: "autoSlideShow")
+            defaults.set(false, forKey: "autoSlideShow")
         }
     }
 }

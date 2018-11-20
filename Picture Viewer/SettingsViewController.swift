@@ -31,21 +31,21 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfCells.count   //array.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableItems.dequeueReusableCellWithIdentifier("SettingsItemCell") as! SettingsItemCell
         //var item = array[indexParh.row]
         //cell.switcher.enabled = true
-        let cell = tableItems.dequeueReusableCellWithIdentifier(arrayOfCells[indexPath.row])! as UITableViewCell
+        let cell = tableItems.dequeueReusableCell(withIdentifier: arrayOfCells[indexPath.row])! as UITableViewCell
         return cell
     }
 
     //MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //только что выделили ячейку == нажали на "кнопку"
         //здесь обычно некий переход на другой экран
     }
@@ -64,8 +64,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     // выбор анимации, сохранение номера анимации в пользовательских настройках
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(row, forKey: "animation")
+        let defaults = UserDefaults.standard
+        defaults.set(row, forKey: "animation")
         return animations[row]
     }
 }

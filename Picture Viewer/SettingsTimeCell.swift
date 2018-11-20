@@ -18,10 +18,10 @@ class SettingsTimeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        if (defaults.objectForKey("timeToSlide") != nil) {
-            timeStepper.value = defaults.doubleForKey("timeToSlide")
+        if (defaults.object(forKey: "timeToSlide") != nil) {
+            timeStepper.value = defaults.double(forKey: "timeToSlide")
         }
         
         var string = Int(timeStepper.value).description
@@ -29,14 +29,14 @@ class SettingsTimeCell: UITableViewCell {
         labelTime.text = string
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     @IBAction func timeStepperValueChanged(sender: UIStepper) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setDouble(timeStepper.value, forKey: "timeToSlide")
+        let defaults = UserDefaults.standard
+        defaults.set(timeStepper.value, forKey: "timeToSlide")
         
         var string = Int(sender.value).description
         string += " sec"
