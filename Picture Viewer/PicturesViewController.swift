@@ -32,7 +32,6 @@ class PicturesViewController: UIViewController {
         
         var imagesListArray: [UIImage] = []
         for item in array! {
-            // TODO: CHECK THIS LINE
             if let imageName = (item as AnyObject).value(forKey: "guid") {
                 if let image = UIImage(named: imageName as! String) {
                     imagesListArray.append(image)
