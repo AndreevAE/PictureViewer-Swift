@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var tableItems: UITableView!
     
@@ -53,17 +53,17 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: - Picker View
     
     // количество компонент в PickerView
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // количество анимаций
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return animations.count
     }
     
     // выбор анимации, сохранение номера анимации в пользовательских настройках
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let defaults = UserDefaults.standard
         defaults.set(row, forKey: "animation")
         return animations[row]

@@ -45,8 +45,8 @@ class PicturesViewController: UIViewController {
         favouriteLabelShowComment()
         
         // инициализация распознавания свайп-жестов
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector(("handleSwipes:")))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector(("handleSwipes:")))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes))
         
         leftSwipe.direction = .left
         rightSwipe.direction = .right
@@ -97,7 +97,7 @@ class PicturesViewController: UIViewController {
     }
     
     // функция управления свайпами
-    func handleSwipes(sender: UISwipeGestureRecognizer) {
+    @objc func handleSwipes(sender: UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
             // влево - следующее изображение
             viewNextImage()

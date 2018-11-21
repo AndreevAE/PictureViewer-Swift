@@ -67,7 +67,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Favourite" id="quB-HR-nga">
                             <connections>
-                                <action selector="addToFavourite:" destination="dxb-2O-9ut" id="Sgm-d5-sE9"/>
+                                <action selector="addToFavouriteWithSender:" destination="dxb-2O-9ut" id="bux-PO-iah"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -140,7 +140,7 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="B6B-ku-Wfm">
                                                     <rect key="frame" x="292" y="10" width="94" height="29"/>
                                                     <connections>
-                                                        <action selector="timeStepperValueChanged:" destination="tRS-E1-wmf" eventType="valueChanged" id="u1a-Cr-QxH"/>
+                                                        <action selector="timeStepperValueChanged:" destination="tRS-E1-wmf" eventType="valueChanged" id="ko3-Gg-r7c"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRg-2Z-xTR">

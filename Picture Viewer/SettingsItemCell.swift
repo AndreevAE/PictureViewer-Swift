@@ -31,7 +31,7 @@ class SettingsItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func saveSwitchState(sender: AnyObject) {
+    @IBAction func saveSwitchState(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         // сохранение значения
         if switcher.isOn {

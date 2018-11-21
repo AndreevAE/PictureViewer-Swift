@@ -34,7 +34,8 @@ class SettingsTimeCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func timeStepperValueChanged(sender: UIStepper) {
+    
+    @IBAction func timeStepperValueChanged(_ sender: UIStepper) {
         let defaults = UserDefaults.standard
         defaults.set(timeStepper.value, forKey: "timeToSlide")
         

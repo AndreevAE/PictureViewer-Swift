@@ -29,7 +29,7 @@ class SettingsRandomOrderCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func switchRandomOrder(sender: AnyObject) {
+    @IBAction func switchRandomOrder(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         
         // сохранение значения переключателя в пользовательских настройках

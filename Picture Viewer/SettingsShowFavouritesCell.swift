@@ -29,7 +29,7 @@ class SettingsShowFavouritesCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func switchShowFavourites(sender: AnyObject) {
+    @IBAction func switchShowFavourites(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         
         // сохранение значения переключателя в пользовательских настройках
