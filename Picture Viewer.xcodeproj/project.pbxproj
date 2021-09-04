@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		119CCC0726E42F0500969B97 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119CCC0626E42F0500969B97 /* UserDefaultsKey.swift */; };
 		844C64AA1C7B2588004AE473 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C64A91C7B2588004AE473 /* SettingsViewController.swift */; };
 		844C64AC1C7B2B83004AE473 /* SettingsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C64AB1C7B2B83004AE473 /* SettingsItemCell.swift */; };
 		844C64AE1C7B3AA4004AE473 /* SettingsTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C64AD1C7B3AA4004AE473 /* SettingsTimeCell.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		119CCC0626E42F0500969B97 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		844C64A91C7B2588004AE473 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		844C64AB1C7B2B83004AE473 /* SettingsItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItemCell.swift; sourceTree = "<group>"; };
 		844C64AD1C7B3AA4004AE473 /* SettingsTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTimeCell.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				844C64B11C7B3B06004AE473 /* SettingsRandomOrderCell.swift */,
 				844C64B31C7B3B1D004AE473 /* SettingsAnimationCell.swift */,
 				844C64B51C7B68D1004AE473 /* PicturesViewController.swift */,
+				119CCC0626E42F0500969B97 /* UserDefaultsKey.swift */,
 				844C64B71C7CBCEC004AE473 /* Pictures.plist */,
 			);
 			path = "Picture Viewer";
@@ -164,6 +167,7 @@
 				844C64B61C7B68D1004AE473 /* PicturesViewController.swift in Sources */,
 				844C64AE1C7B3AA4004AE473 /* SettingsTimeCell.swift in Sources */,
 				84D193E11C7B113600F4CDE3 /* AppDelegate.swift in Sources */,
+				119CCC0726E42F0500969B97 /* UserDefaultsKey.swift in Sources */,
 				844C64B01C7B3AD5004AE473 /* SettingsShowFavouritesCell.swift in Sources */,
 				844C64AA1C7B2588004AE473 /* SettingsViewController.swift in Sources */,
 				844C64B21C7B3B06004AE473 /* SettingsRandomOrderCell.swift in Sources */,
